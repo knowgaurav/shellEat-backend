@@ -11,6 +11,8 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/transactions", transactionsRoutes);
 
-app.listen(8800, () => {
+const PORT = process.env.PORT || 8800;
+
+app.listen(PORT, () => {
     console.log("Connected!");
 });
